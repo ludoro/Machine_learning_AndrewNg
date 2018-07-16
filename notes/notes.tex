@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsbsy}
+
+\title{\LARGE MACHINE LEARNING}
+\author{Ludovico Bessi}
+\date{July 2018}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Week 1}
+\subsection{Linear regression}
+Suppose we have this data: feet and price of some houses. We want to be able to
+predict the price of the next house knowking only the feet. The best way to do
+that is using linear regression: $$ h_\theta(x) = \theta_0 + \theta_1 x $$
+We want to find $\theta_i$ such that the line behaves well with the data.
+This is the same as minimizing the following function, called cost function:
+$$ J(\theta_0,\theta_1) = \frac{1}{2n}\sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2$$
+We can minimize that function using "Gradient descent".
+We need to repeat the following operation until convergence:
+$$ \theta_j := \theta_j -\alpha \frac{\partial}{\partial \theta_j}
+J(\theta_0,\theta_1)$$
+
+The intuition behind this is that at the minimum the second term goes to 0 as
+the derivative goes to 0. $\alpha$ is called the learnig rate, and it is decided
+by the user.
+\newpage
+
+
+\section{Week 2}
+\subsection{Multivariate linear regression}
+Suppose now that we have multiple information about houses.
+Then, we want to find a function like this:
+$$ h_\theta(x) = \sum_{i=1}^{n} \theta_i x_i $$
+We can vectorize that function, obtaining just:
+$$ h_\theta(x) = \theta^T x $$
+
+The gradient descent method does not change. However, there is a way to speed
+things up. We can normalize the $\theta_i$ to have them all in the same value
+range. It is helpful because we minimize the risk of oscillations between values.
+We just need to do the following:
+$$ x_i := \frac{x_i - \mu_i}{s_i} $$
+Where $\mu_i$ is the average and $s_i$ is the standard deviation.
+
+\subsection{Alternative to Gradient descent: Normal equation}
+Gradiend descent is an iterative method, it is good even when we have many features.
+However it is still iterative, meaning that in principle we may spend a lot of time
+computing if we choose the wrong $\alpha$.
+
+We can then use the normal equation if n is not too big:
+$$ \theta = (X^T X )^{-1} X^T y $$
+We need to be careful for two reasons: it may be the case that $X^T X$ is not
+invertible, because there are linearly dependent features, or too many of them.
+Moreover, calculating $\theta$ in this way costs $O(n^3)$.  
+
+\end{document}
