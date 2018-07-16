@@ -25,6 +25,9 @@ We need to repeat the following operation until convergence:
 $$ \theta_j := \theta_j -\alpha \frac{\partial}{\partial \theta_j}
 J(\theta_0,\theta_1)$$
 
+This is the same as saying:
+$$ \theta_j := \theta_j - \alpha*\frac{1}{n}\sum_{i=1}^{n}(h_\theta(x^{(i)} - y^{(i)})x_j^{(i)}$$
+
 The intuition behind this is that at the minimum the second term goes to 0 as
 the derivative goes to 0. $\alpha$ is called the learnig rate, and it is decided
 by the user.
@@ -55,6 +58,6 @@ We can then use the normal equation if n is not too big:
 $$ \theta = (X^T X )^{-1} X^T y $$
 We need to be careful for two reasons: it may be the case that $X^T X$ is not
 invertible, because there are linearly dependent features, or too many of them.
-Moreover, calculating $\theta$ in this way costs $O(n^3)$.  
+Moreover, calculating $\theta$ in this way costs $O(n^3)$.
 
 \end{document}
