@@ -60,4 +60,61 @@ We need to be careful for two reasons: it may be the case that $X^T X$ is not
 invertible, because there are linearly dependent features, or too many of them.
 Moreover, calculating $\theta$ in this way costs $O(n^3)$.
 
+\section{Week 3}
+\subsection{Linear classification}
+Suppose we get an e-mail. We want to understand whether or not it is spam.
+We need a function that takes as input all the features of said email, and
+outputs either 0 or 1. We use the sigmoid function to achieve this.
+Let $ g : \mathbf{R} \to (0,1) $ be the function $g(z) = \frac{1}{1+e^{-z}}$.
+Then we can write $h_\theta(x) = g(\theta^T x)$.
+For example, if we have $h_\theta(x) = 0.7$, this means that we 70\% of times the
+output will be 1. We define y = 1 if $h_\theta(x) \geq 0.5$ and y = 0 otherwise.
+
+\subsection{Logistic regression model}
+It is evident that we cannot use the same cost function as the regression model.
+Instead, we need to use the following:
+$$ J(\theta) = \frac{1}{m}\sum_{i=1}^m Cost(h_\theta(x^{(i)}),y^{(i)}) $$,
+with $Cost(h_\theta(x^{(i)}),y^{(i)}) =
+-ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$
+We then have the vectorized equation, with $h = g(X\theta)$:
+$$ J(\theta) = \frac{1}{m}(-y^Tlog(h)-(1-y)^Tlog(1-h)) $$
+
+\subsection{Multiclass classification}
+We now treat the case with $y \in \{0,1,2,...,n\}.$
+We divide the problem in n+1 sub problems of binary classification, the prediction
+will be the maximum value of $h_\theta(x)$.
+
+\subsection{Overfitting}
+If we try to fit too many features, we end up with a function that cannot predict
+well new results. To avoid it, we need to choose which features to analyze or to
+reduce the magnitude of the parameters.
+Let's see this last point in more detail: we need to change the cost function to
+avoid overfitting.
+Suppose we have:
+$$ \theta_0 + \theta_1x + \theta_2x^2  + \theta_3x^3 + \theta_4x^4 $$
+We do not want to ditch the last terms, but we want to reduce their influence.
+The new cost function will then be like this:
+$$ min_{\theta}\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2 +
+1000 \theta_3^2 + 1000 \theta_4^2 $$
+When the cost function goes to 0, inevitably the terms $\theta_3$ and $\theta_4$
+must go to 0 as well.
+We can rewrite it with $\lambda$ as regularization parameter:
+$$ min_{\theta}\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2 + \lambda
+\sum_{j=1}^n\theta_j^2$$
+
+We must be careful with the choiche of $\lambda$, if it is too large we could
+risk underfitting, moreover the Gradient descent method won't converge.
+If it is too little, we do not remove overfitting.
+
+\subsection{Regularized linear regression}
+
+$$\theta_j := \theta_j(1-\alpha\frac{\lambda}{m})-
+\frac{\lambda}{m}\sum_{i=1}^m(h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} $$
+
+$$ \theta = (X^T X + \lambda \cdot L)^{-1} X^T y $$
+
+\subsection{Regularized logistic regression}
+
+$$ J(\theta) = -\frac{1}{m}\sum_{i=1}^m[y^{(i)}log(h_\theta(x^{(i)})) +
+(1-y^{(i)})]log(1-h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2$$
 \end{document}
