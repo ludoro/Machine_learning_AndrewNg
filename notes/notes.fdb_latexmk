@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1531751522 "notes.tex" "notes.pdf" "notes" 1531751523
+["pdflatex"] 1532087620 "notes.tex" "notes.pdf" "notes" 1532087621
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -48,11 +48,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1508588794 4129593 30145b81c08eff01c211f2c9b9bd8c4a ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "notes.aux" 1531751523 1052 64636e288e9455ef0f4c36629600a59c ""
-  "notes.tex" 1531751522 5297 cfbb9ef0e59d54cb9cbdedf600a12f2e ""
-  "notes.toc" 1531751523 828 20fbe4210ef54c0db89fa5e669164f6c ""
+  "notes.aux" 1532087621 1645 9da06d415644c7bb26a4523a53fa5ea6 ""
+  "notes.tex" 1532087620 7814 6c1e23d4776365d0332a0a87b9e59785 ""
+  "notes.toc" 1532087621 1295 064bf7b16e61d4eaf0ce418f8aff8ad8 ""
   (generated)
-  "notes.pdf"
-  "notes.log"
-  "notes.aux"
   "notes.toc"
+  "notes.aux"
+  "notes.log"
+  "notes.pdf"

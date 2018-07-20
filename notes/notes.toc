@@ -10,3 +10,10 @@
 \contentsline {subsection}{\numberline {3.4}Overfitting}{4}
 \contentsline {subsection}{\numberline {3.5}Regularized linear regression}{4}
 \contentsline {subsection}{\numberline {3.6}Regularized logistic regression}{5}
+\contentsline {section}{\numberline {4}Week 4}{5}
+\contentsline {subsection}{\numberline {4.1}Introduction}{5}
+\contentsline {subsection}{\numberline {4.2}Model representation}{5}
+\contentsline {subsection}{\numberline {4.3}Examples and intuitions}{5}
+\contentsline {subsubsection}{\numberline {4.3.1}AND operator, OR operator}{5}
+\contentsline {subsection}{\numberline {4.4}XNOR operator}{5}
+\contentsline {subsection}{\numberline {4.5}Multiclass classification}{6}

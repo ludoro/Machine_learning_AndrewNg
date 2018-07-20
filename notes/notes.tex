@@ -117,4 +117,60 @@ $$ \theta = (X^T X + \lambda \cdot L)^{-1} X^T y $$
 
 $$ J(\theta) = -\frac{1}{m}\sum_{i=1}^m[y^{(i)}log(h_\theta(x^{(i)})) +
 (1-y^{(i)})]log(1-h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2$$
+
+
+\section{Week 4}
+\subsection{Introduction}
+In this section the main topic is neural networks. The focus is on understanding
+how to build them, with the help of some examples to build intuition.
+\subsection{Model representation}
+The input is a vector $x_i$ of features. $x_0$ is sometimes called the bias
+feature. We can still use the sigmoid activation function
+$\frac{1}{1 - e^{\theta^T x}}$. Between the input and the output, there may be
+more layers, called hidden layers. The layers are "connected" using weights.
+Suppose we have just one hidden layer. We can find the first value of that
+vector as following:
+$$ a_1 = g(\theta_{10}^{(1)}x_0 + \theta_{11}^{(1)}x_1 + \theta_{12}^{(1)}x_2 +
+          + \theta_{13}^{(1)}x_3)$$
+Let's explain it a bit. To get the \textbf{first} value of the layer, we
+just multiplied the \textbf{first} row of the matrices of weigths by the features.
+Osservaton: if layer 1 has 2 input nodes and layer 2 has 4 activation nodes, then our matrix
+$\theta_{ij}$ has dimension 4x3.
+\subsection{Examples and intuitions}
+\subsubsection{AND operator, OR operator}
+Recall that a AND b == TRUE if and only if both a and b are true.
+Then we construct a neural network as follows:
+$$\begin{pmatrix}x_0\\x_1\\x_2\end{pmatrix} \to
+  \begin{pmatrix}g(z^{(2)})\end{pmatrix} \to
+  h_\theta(x)$$
+With $\theta_{1,3} = [-30 20 20]$, then our output will be positive if both
+$x_1$ and $x_2$ are 1. Remember that $x_0$ is always fixed at 1.
+
+By setting $\theta_{1,3} = [-10,20,20]$ we get the OR operator.
+
+\subsection{XNOR operator}
+By combining OR, AND and XOR we can get the XNOR operator. XNOR will give 1 if
+$x_1$ and $x_2$ are both 0 or 1. To do so, we need to
+add another hidden layer:
+
+$$\begin{pmatrix}x_0\\x_1\\x_2\end{pmatrix} \to
+  \begin{pmatrix}a_1^{(2)}\\a_2^{(2)}\end{pmatrix} \to
+  \begin{pmatrix}a_1^{(2)}\\a^{(3)}\end{pmatrix} \to
+  h_\theta(x)$$
+
+For the transition from the input layer to the first hidden layer, we use a matrix
+that combines AND and NOR:
+$$ \theta^{(1)} = \begin{pmatrix} -30\ 20\ 20\\ 10 -20 -20\end{pmatrix} $$
+
+For the transition between second and third layer, we use the values for OR:
+
+$$ \theta^{(2)} = [-10,20,20]$$
+
+\subsection{Multiclass classification}
+
+The output of the neural network may as well be a vector and not just a single
+number. Suppose we have a photo of a vehicle and we need to tell if it is a car,
+a truck or a scooter. The output vector will have three numbers ranging from 0
+to 1, that indicate the level of confidence of our claim.
+
 \end{document}
