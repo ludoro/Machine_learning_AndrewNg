@@ -173,4 +173,41 @@ number. Suppose we have a photo of a vehicle and we need to tell if it is a car,
 a truck or a scooter. The output vector will have three numbers ranging from 0
 to 1, that indicate the level of confidence of our claim.
 
+\section{Week 5}
+The main topic will be: How to train a Neural network?
+\subsection{Cost function}
+The cost function is similar to the logistic regression cost function, we just
+need to add a summation in the first term, because it needs to loop through all
+the output nodes. In the regularization term, we need to add two summations,
+because we must take into account multiple $\theta$ matrices.
+\subsection{Back propagation algorithm}
+Backpropagation means: "minimizing cost function".
+\subsection{Error in back propagation}
+We call $\delta$ the error in the backpropagation algorithm. It is calculated by
+multiplying the following $a_i$ nodes by the corresponding $\theta_{i,j}$.
+
+\subsection{Gradient checking}
+The following formula is useful when it is needed to check whether or not the
+backpropagation algorithm is working fine:
+
+$$\frac{\partial}{\partial \theta}J(\theta) \approx \frac{J(\theta + \epsilon)
+- J(\theta - \epsilon)}{2\epsilon} $$
+
+\subsection{random initialization}
+Setting all theta's to 0 at the start will not work. It is needed to set those
+in a random range $[-\epsilon,+\epsilon]$.
+\subsection{Wrapping it up}
+The following steps are required to train a neural network:
+\begin{itemize}
+  \item Randomly initialize the weights
+  \item Implement forward propagation to get $h_\theta(x)$ for all $x_i$
+  \item Implement Cost function
+  \item Using back propagation to compute partial derivatives
+  \item Use gradient checking one time to be sure that back propagation
+        is working properly.
+  \item Use gradient descent or other built-in functions to minimize the cost
+        function with the weights. 
+
+
+\end{itemize}
 \end{document}

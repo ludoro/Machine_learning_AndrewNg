@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1532087620 "notes.tex" "notes.pdf" "notes" 1532087621
+["pdflatex"] 1532161572 "notes.tex" "notes.pdf" "notes" 1532161573
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty" 1480098820 2431 fe3078ec12fc30287f568596f8e0b948 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls" 1480098821 19821 310da678527a7dfe2a02c88af38079b7 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty" 1480098821 4732 d63eda807ac82cca2ca8488efd31a966 ""
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd" 1480098821 2256 80ce1168fb4ce6a85583a9cf8972c013 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu" 1487721667 2004 ac51aeac484f08c01026120d62677eca ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu" 1487721667 3181 1cb3e9ad01f4a01127b2ffd821bfeec7 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo" 1480098821 8292 e897c12e1e886ce77fe26afc5d470886 ""
@@ -48,11 +49,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1508588794 4129593 30145b81c08eff01c211f2c9b9bd8c4a ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "notes.aux" 1532087621 1645 9da06d415644c7bb26a4523a53fa5ea6 ""
-  "notes.tex" 1532087620 7814 6c1e23d4776365d0332a0a87b9e59785 ""
-  "notes.toc" 1532087621 1295 064bf7b16e61d4eaf0ce418f8aff8ad8 ""
+  "notes.aux" 1532161572 2231 88d83f59061da21fed37c117997b5959 ""
+  "notes.tex" 1532161572 9072 414a8a1f5519f30f72aab45799d48516 ""
+  "notes.toc" 1532161572 1755 512bf350965a2d8a9937525d6f31307c ""
   (generated)
+  "notes.pdf"
   "notes.toc"
   "notes.aux"
   "notes.log"
-  "notes.pdf"
