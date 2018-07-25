@@ -4,7 +4,7 @@
 \usepackage{amsthm}
 \usepackage{amsbsy}
 
-\title{\LARGE MACHINE LEARNING}
+\title{\LARGE MACHINE LEARNING by Andrew NG}
 \author{Ludovico Bessi}
 \date{July 2018}
 
@@ -206,8 +206,76 @@ The following steps are required to train a neural network:
   \item Use gradient checking one time to be sure that back propagation
         is working properly.
   \item Use gradient descent or other built-in functions to minimize the cost
-        function with the weights. 
+        function with the weights.
 
 
 \end{itemize}
+
+\section{Week 6}
+The main topic is about understanding if a given neural network works properly.
+Moreover, How can we speed up the algorithm?
+
+\subsection{Evaluating hypothesis}
+An idea is to split our data: 70\% will be training set and the remaining 30\%
+will be the set test. Then we introduce a test error function:
+$$err(h_\theta(x),y) = 1 $$ if $h_\theta(x) \geq 0.5 and  y = 0$ or the opposite.
+
+\subsection{Bias vs Varince}
+High bias $=$ underfitting while High variance means overfitting. \\
+
+High bias: $J_{train}$ and $J_{CV}$ very high. \\
+High variance: $J_{CV} >> J_{train}$.
+
+Having more data helps with high variance, while it does not help if we have
+high bias.
+
+More training examples, smaller set of features and increasing $\lambda$ helps
+with high variance. \\
+Adding features and decreasing $\lambda$ helps with high bias.
+
+\subsection{Week 7}
+Support vector machine is one of the most useful black box algorithm for machine
+learning. It uses different functions you can choose (kernels) that are handy
+when tracting similarity. Useful to perform feature scaling when using Gaussian
+kernel. n = # of featues, m = # of training examples.
+
+if n $geq m$, use logistic regression or SVM without kernel.
+If n is small and m intermediate, use SVM with Gaussian kernel.
+If n is small and m is large, add more features then use logistic regression or
+SVM without kernel.
+
+\subsection{Week 8}
+The main topics will be clustering and principal component analysis, in the
+setting of unsupervised learning.
+
+\subsubsection{Clustering and K-mean algorithm}
+We have some data, and we need to classify it. To do so, we pick K centroids and
+we run K-mean algorithm to optimise their position. That is, to minimize the
+total distance between the $K_i$ centroid and the cluster points. At first,
+we need to randomize the centroids. It is higly inneficient to just choose random
+points. Instead, we should pick as starting centroid a point of the cluster.
+
+\subsubsection{Data compression and Principal component analysis}
+
+Data compression means moving your data set from nD to mD, with m $<$ n.
+(Example: a line in $\mathbb{R}^2$ becomes point on the real line).
+Principal components analysis is deeply interconnected with data compression:
+if we have a scatter plot, then going to 1D may be tricky.
+We neeed to project in such a way to reduce the error.
+We do that by computing the covariance matrix, computing the eigenvectors and we
+multiply U by x, where U is [U,S,V] = svd(covariance). You pick k such that
+99\% of covariance is retained.
+PCA is not useful if you want to avoid overfitting, in that case it is best to
+use normalisation.
+
+
+
+\subsection{Week 9}
+
+
+
+\subsection{Week 10}
+
+
+\subsection{Week 11}
 \end{document}
