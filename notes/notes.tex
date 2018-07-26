@@ -218,10 +218,10 @@ Moreover, How can we speed up the algorithm?
 \subsection{Evaluating hypothesis}
 An idea is to split our data: 70\% will be training set and the remaining 30\%
 will be the set test. Then we introduce a test error function:
-$$err(h_\theta(x),y) = 1 $$ if $h_\theta(x) \geq 0.5 and  y = 0$ or the opposite.
+$$err(h_\theta(x),y) = 1 $$ if $h_\theta(x) \geq 0.5$ and $y = 0$ or the opposite.
 
 \subsection{Bias vs Varince}
-High bias $=$ underfitting while High variance means overfitting. \\
+High bias = underfitting while High variance means overfitting. \\
 
 High bias: $J_{train}$ and $J_{CV}$ very high. \\
 High variance: $J_{CV} >> J_{train}$.
@@ -237,7 +237,7 @@ Adding features and decreasing $\lambda$ helps with high bias.
 Support vector machine is one of the most useful black box algorithm for machine
 learning. It uses different functions you can choose (kernels) that are handy
 when tracting similarity. Useful to perform feature scaling when using Gaussian
-kernel. n = # of featues, m = # of training examples.
+kernel. n = \# of featues, m = \# of training examples.
 
 if n $geq m$, use logistic regression or SVM without kernel.
 If n is small and m intermediate, use SVM with Gaussian kernel.
@@ -258,7 +258,7 @@ points. Instead, we should pick as starting centroid a point of the cluster.
 \subsubsection{Data compression and Principal component analysis}
 
 Data compression means moving your data set from nD to mD, with m $<$ n.
-(Example: a line in $\mathbb{R}^2$ becomes point on the real line).
+(Example: a line in $\mathbf{R}^2$ becomes point on the real line).
 Principal components analysis is deeply interconnected with data compression:
 if we have a scatter plot, then going to 1D may be tricky.
 We neeed to project in such a way to reduce the error.
@@ -268,14 +268,46 @@ multiply U by x, where U is [U,S,V] = svd(covariance). You pick k such that
 PCA is not useful if you want to avoid overfitting, in that case it is best to
 use normalisation.
 
-
-
 \subsection{Week 9}
+The main topic will be anomaly detection and recommendation systems.
 
+\subsubsection{Anomaly detection}
+Self explanatory, makes use of Gaussian distribution.
 
+\subsubsection{recommendation systems}
+How a user will rate a new film given the previous ratings? How is it connected
+with other users ratings?
+We answer these questions by using gradient descent algorithm to minimize
+different cost functions.
 
 \subsection{Week 10}
+The main topic will be  big data in the context of machine learning.
+
+\subsubsection{Batch gradient descent and stochastic gradient descent}
+
+Batch gradient descent computes the gradient using the whole dataset.
+This is great for convex, or relatively smooth error manifolds.
+In this case, we move somewhat directly towards an optimum solution,
+either local or global.
+Additionally, batch gradient descent, given an annealed learning rate,
+will eventually find the minimum located in it's basin of attraction.
+
+The way I like to think of how SGD works is to imagine that I have one point
+that represents my input distribution.
+My model is attempting to learn that input distribution.
+Surrounding the input distribution is a shaded area that represents the
+input distributions of all of the possible minibatches I could sample.
+It's usually a fair assumption that the minibatch input distributions are
+close in proximity to the true input distribution. Batch gradient descent,
+ at all steps, takes the steepest route to reach the true input distribution.
+ SGD, on the other hand, chooses a random point within the shaded area, and
+ takes the steepest route towards this point. At each iteration, though,
+ it chooses a new point. The average of all of these steps will approximate
+ the true input distribution, usually quite well.
 
 
 \subsection{Week 11}
+\subsubsection{Application example: Photo OCR}
+Self-explanatory. Get image -> Text detection -> Character segmentation ->
+Character classification. 
 \end{document}

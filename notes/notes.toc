@@ -27,3 +27,14 @@
 \contentsline {section}{\numberline {6}Week 6}{7}
 \contentsline {subsection}{\numberline {6.1}Evaluating hypothesis}{7}
 \contentsline {subsection}{\numberline {6.2}Bias vs Varince}{7}
+\contentsline {subsection}{\numberline {6.3}Week 7}{8}
+\contentsline {subsection}{\numberline {6.4}Week 8}{8}
+\contentsline {subsubsection}{\numberline {6.4.1}Clustering and K-mean algorithm}{8}
+\contentsline {subsubsection}{\numberline {6.4.2}Data compression and Principal component analysis}{8}
+\contentsline {subsection}{\numberline {6.5}Week 9}{8}
+\contentsline {subsubsection}{\numberline {6.5.1}Anomaly detection}{8}
+\contentsline {subsubsection}{\numberline {6.5.2}recommendation systems}{8}
+\contentsline {subsection}{\numberline {6.6}Week 10}{9}
+\contentsline {subsubsection}{\numberline {6.6.1}Batch gradient descent and stochastic gradient descent}{9}
+\contentsline {subsection}{\numberline {6.7}Week 11}{9}
+\contentsline {subsubsection}{\numberline {6.7.1}Application example: Photo OCR}{9}
